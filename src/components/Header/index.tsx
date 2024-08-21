@@ -7,7 +7,9 @@ export const Header = () => {
   return (
     <HeaderBar>
       <div>
-        <img src={logo} alt="EPLAY" />
+        <Link to="/">
+          <img src={logo} alt="EPLAY" />
+        </Link>
         <nav>
           <Links>
             <LinkItem>
