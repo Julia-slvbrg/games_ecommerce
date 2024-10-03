@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Section from '../Section'
 import zoom from '../../assets/images/zoom.svg'
 import play from '../../assets/images/play_btn.svg'
@@ -5,14 +6,11 @@ import resident_evil from '../../assets/images/resident_evil.svg'
 import legend_of_zelda from '../../assets/images/legend-of-zelda.svg'
 import close from '../../assets/images/close.svg'
 import { Action, Item, Items, Modal, ModalContent } from './styles'
-import { useState } from 'react'
+import { GalleryItem } from '../../pages/Home'
 
-interface GalleryType {
-  type: 'image' | 'video'
-  url: string
-}
 
-const mock: GalleryType[] = [
+
+const mock: GalleryItem[] = [
   {
     type: 'image',
     url: resident_evil
@@ -30,24 +28,25 @@ const mock: GalleryType[] = [
 type Props = {
   defaultCover: string
   name: string
+  items: GalleryItem[]
 }
 
-interface ModalState extends GalleryType {
+interface ModalState extends GalleryItem {
   isVisible: boolean
 }
 
-const Gallery = ({ defaultCover, name }: Props) => {
+const Gallery = ({ defaultCover, name, items }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     type: 'image',
     url: ''
   })
 
-  const getMediaCover = (item: GalleryType) => {
+  const getMediaCover = (item: GalleryItem) => {
     if (item.type === 'image') return item.url
     return defaultCover
   }
-  const getMediaIcon = (item: GalleryType) => {
+  const getMediaIcon = (item: GalleryItem) => {
     if (item.type === 'image') return zoom
     return play
   }
@@ -64,7 +63,7 @@ const Gallery = ({ defaultCover, name }: Props) => {
     <>
       <Section title="Galeria" $background="black">
         <Items>
-          {mock.map((media, index) => (
+          {items.map((media, index) => (
             <Item
               key={index}
               onClick={() => {
