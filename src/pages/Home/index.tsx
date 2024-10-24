@@ -43,11 +43,13 @@ export const Home = () => {
           games={onSaleGames}
           title="Promoções"
           $background="gray"
+          id="on-sale"
         />
         <ProductsList
           games={SoonGames}
           title="Em breve"
           $background="black"
+          id="comming-soon"
         />
       </>
     )
