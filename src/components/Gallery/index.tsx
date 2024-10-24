@@ -2,28 +2,9 @@ import { useState } from 'react'
 import Section from '../Section'
 import zoom from '../../assets/images/zoom.svg'
 import play from '../../assets/images/play_btn.svg'
-import resident_evil from '../../assets/images/resident_evil.svg'
-import legend_of_zelda from '../../assets/images/legend-of-zelda.svg'
 import close from '../../assets/images/close.svg'
 import { Action, Item, Items, Modal, ModalContent } from './styles'
 import { GalleryItem } from '../../pages/Home'
-
-
-
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: resident_evil
-  },
-  {
-    type: 'image',
-    url: legend_of_zelda
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=z6d9ct7ea8L3DjmF" title="YouTube video player'
-  }
-]
 
 type Props = {
   defaultCover: string
