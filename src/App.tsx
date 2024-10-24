@@ -5,10 +5,11 @@ import { GlobalStyle } from './styles'
 import RoutesComponent from './routes'
 import Footer from './components/Footer'
 import { store } from './store'
+import Cart from './components/Cart'
 
 function App() {
   return (
-    <Provider store={store} >
+    <Provider store={store}>
       <BrowserRouter>
         <GlobalStyle />
         <div className="container">
@@ -16,6 +17,7 @@ function App() {
         </div>
         <RoutesComponent />
         <Footer />
+        <Cart />
       </BrowserRouter>
     </Provider>
   )
