@@ -23,7 +23,7 @@ export const Footer = () => {
           <Links>
             <li>
               <Link to="/#on-sale">Promoções</Link>
-              <Link to="/#comming-soon">Em breve</Link>
+              <Link to="/#coming-soon">Em breve</Link>
             </li>
           </Links>
         </FooterSection>

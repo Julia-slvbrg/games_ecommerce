@@ -6,6 +6,7 @@ export const Container = styled.footer`
   background-color: ${colors.gray};
   padding: 32px 0;
   font-size: 14px;
+  margin-top: 40px;
 `
 export const TitleSection = styled.h4`
   color: ${colors.white};

@@ -12,6 +12,7 @@ export const BtnContainer = styled.button<Props>`
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
+  cursor: pointer;
 `
 export const BtnLink = styled(Link)`
   border: 2px solid ${colors.white};

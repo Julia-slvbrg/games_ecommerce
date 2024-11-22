@@ -49,7 +49,7 @@ export const Home = () => {
           games={SoonGames}
           title="Em breve"
           $background="black"
-          id="comming-soon"
+          id="coming-soon"
         />
       </>
     )
