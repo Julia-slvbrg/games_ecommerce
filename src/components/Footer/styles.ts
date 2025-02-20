@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { HashLink } from 'react-router-hash-link'
+
 import { colors } from '../../styles'
 
 export const Container = styled.footer`
