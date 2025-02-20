@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { colors } from '../../styles'
 
 export const Items = styled.ul`
@@ -21,6 +22,7 @@ export const Action = styled.div`
 `
 export const Item = styled.li`
   position: relative;
+  cursor: zoom-in;
 
   > img {
     border: 2px solid ${colors.white};

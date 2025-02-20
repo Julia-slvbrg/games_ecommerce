@@ -1,5 +1,6 @@
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
+
 import { useGetSoonQuery, useGetOnSaleQuery } from '../../services/api'
 
 export interface GalleryItem {
@@ -49,7 +50,7 @@ export const Home = () => {
           games={SoonGames}
           title="Em breve"
           $background="black"
-          id="comming-soon"
+          id="coming-soon"
         />
       </>
     )

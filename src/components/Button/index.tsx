@@ -1,7 +1,7 @@
-import { BtnContainer, BtnLink } from './styles'
+import * as S from './styles'
 
 export type Props = {
-  type: 'button' | 'link'
+  type: 'button' | 'link' | 'submit'
   title: string
   to?: string
   onClick?: () => void
@@ -17,23 +17,23 @@ export const Button = ({
   children,
   $variant = 'primary'
 }: Props) => {
-  if (type === 'button') {
+  if (type === 'button' || type === 'submit') {
     return (
-      <BtnContainer
-        type="button"
+      <S.BtnContainer
+        type={type}
         title={title}
         onClick={onClick}
         $variant={$variant}
       >
         {children}
-      </BtnContainer>
+      </S.BtnContainer>
     )
   }
 
   return (
-    <BtnLink to={to as string} title={title}>
+    <S.BtnLink to={to as string} title={title}>
       {children}
-    </BtnLink>
+    </S.BtnLink>
   )
 }
 
