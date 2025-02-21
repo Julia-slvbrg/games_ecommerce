@@ -31,7 +31,9 @@ const Header = () => {
             <span />
           </S.Hamburger>
           <Link to="/">
-            <img src={logo} alt="EPLAY" />
+            <h1>
+              <img src={logo} alt="EPLAY" />
+            </h1>
           </Link>
           <nav>
             <S.Links>
@@ -62,7 +64,7 @@ const Header = () => {
             </S.Links>
           </nav>
         </div>
-        <S.CartBtn onClick={() => openCart()}>
+        <S.CartBtn role="button" onClick={() => openCart()}>
           {items.length}
           <span> - produtos(s)</span>
           <img src={shoppingCart} alt="Carrinho" />

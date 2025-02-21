@@ -22,6 +22,10 @@ export const HeaderBar = styled.header`
     text-decoration: none;
     font-weight: bold;
   }
+
+  h1 {
+    line-height: 0;
+  }
 `
 export const HeaderRow = styled.div`
   display: flex;
@@ -55,7 +59,6 @@ export const NavMobile = styled.nav`
       display: block;
     }
   }
-
 `
 export const LinkItem = styled.li`
   margin-right: 16px;
@@ -70,7 +73,7 @@ export const LinkItem = styled.li`
     }
   }
 `
-export const CartBtn = styled.a`
+export const CartBtn = styled.span`
   display: flex;
   cursor: pointer;
 
